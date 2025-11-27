@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload & Predict</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Upload Image for Prediction</h1>
+      <p class="subtitle">Submit a skin lesion image to get the predicted disease and an enhanced view.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Upload</h2>
+      <form class="upload-form" action="{{ url_for('predict_page') }}" method="post" enctype="multipart/form-data">
+        <div class="form-row">
+          <label for="image">Choose an image</label>
+          <input type="file" id="image" name="image" accept="image/png, image/jpeg, image/jpg, image/bmp" required>
+        </div>
+        <div class="actions">
+          <button class="btn" type="submit">Predict</button>
+          <a class="btn btn-secondary" href="{{ url_for('index') }}">Back to Home</a>
+        </div>
+      </form>
+
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <div class="flash-messages">
+            {% for msg in messages %}
+              <div class="flash">{{ msg }}</div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endwith %}
+
+      {% if error %}
+        <div class="error">{{ error }}</div>
+      {% endif %}
+    </section>
+
+    {% if prediction or enhanced_url %}
+      <section class="card">
+        <h2>Results</h2>
+        {% if prediction %}
+          <p class="prediction"><strong>Prediction:</strong> {{ prediction }}</p>
+        {% endif %}
+        {% if enhanced_url %}
+          <div class="enhanced">
+            <h3>Enhanced Image</h3>
+            <img src="{{ enhanced_url }}" alt="Enhanced view of the uploaded image">
+          </div>
+        {% endif %}
+      </section>
+    {% endif %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; {{ 2025 }} Skin Cancer Detection Interface</small>
+    </div>
+  </footer>
+</body>
+</html>
