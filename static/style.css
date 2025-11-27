@@ -1,0 +1,12 @@
+/* Base Reset */*{box-sizing:border-box}html,body{margin:0;padding:0}body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;line-height:1.6;background:#0f172a;color:#e2e8f0}
+/* Layout */.container{max-width:980px;margin:0 auto;padding:24px}
+/* Header */.site-header{background:linear-gradient(135deg,#1e293b,#0ea5e9);color:#fff}.site-header .container{padding:40px 24px}.site-header h1{margin:0 0 8px 0;font-size:32px}.site-header .subtitle{margin:0;color:#cbd5e1}
+/* Footer */.site-footer{border-top:1px solid #1f2937;background:#0b1220;color:#94a3b8}.site-footer .container{padding:20px 24px;text-align:center}
+/* Card */.card{background:#111827;border:1px solid #1f2937;border-radius:12px;padding:24px;margin:24px 0;box-shadow:0 8px 20px rgba(2,6,23,0.4)}.card h2{margin-top:0;color:#e5e7eb}
+/* Typography */p{margin:12px 0}.prediction{font-size:18px;color:#d1fae5}
+/* Actions & Buttons */.actions{display:flex;gap:12px;margin-top:16px}.btn{display:inline-block;padding:10px 16px;border-radius:8px;background:#0ea5e9;color:#0b1220;text-decoration:none;font-weight:600;border:1px solid #0284c7;transition:transform .08s ease,box-shadow .08s ease}.btn:hover{transform:translateY(-1px);box-shadow:0 6px 14px rgba(14,165,233,.3)}.btn:active{transform:translateY(0)}.btn-secondary{background:#1f2937;color:#e5e7eb;border-color:#374151}
+/* Form */.upload-form{display:flex;flex-direction:column;gap:12px}.form-row{display:flex;flex-direction:column;gap:8px}.form-row label{font-weight:600;color:#cbd5e1}.form-row input[type=file]{padding:10px;border-radius:8px;background:#0b1220;color:#e5e7eb;border:1px dashed #334155}
+/* Messages */.flash-messages{margin-top:12px}.flash{padding:10px 12px;border-radius:8px;background:#1f2937;color:#93c5fd;border:1px solid #334155;margin-bottom:8px}.error{padding:10px 12px;border-radius:8px;background:#1f2937;color:#fecaca;border:1px solid #4c1d95;margin-top:12px}
+/* Results */.enhanced{margin-top:16px}.enhanced img{max-width:100%;height:auto;border-radius:12px;border:1px solid #1f2937;box-shadow:0 6px 16px rgba(2,6,23,.5)}
+/* Lists */ul{padding-left:20px}li{margin:6px 0}
+/* Responsive */@media (max-width:640px){.site-header h1{font-size:26px}.container{padding:18px}.card{padding:18px}}
