@@ -1,6 +1,6 @@
 # Skin Cancer Lesions Classification using Deep Learning
 
-This repository contains deep learning models developed to classify skin lesions into multiple diagnostic types. By leveraging transfer learning with **MobileNetV2** and combining it with hybrid architectural layers, this project achieves high classification accuracy to aid in early skin cancer detection.
+This repository contains deep learning models developed to detect and classify skin lesions into multiple diagnostic types. By leveraging transfer learning with **MobileNetV2** and combining it with hybrid architectural layers, this project achieves high classification accuracy to aid in early skin cancer detection.
 
 ## 🚀 Key Features
 - **High Performance:** Attained an optimized classification accuracy of **95.7%** on specific benchmarks (outperforming several standard approaches).
