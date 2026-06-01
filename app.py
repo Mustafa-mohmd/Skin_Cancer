@@ -5,7 +5,7 @@ from werkzeug.utils import secure_filename
 
 # Use the directory containing this file as base (works on PythonAnywhere too)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
+# the dir for uploads
 UPLOAD_FOLDER = os.path.join(BASE_DIR, "uploads")
 ENHANCED_FOLDER = os.path.join(BASE_DIR, "static", "enhanced")
 
